@@ -34,6 +34,7 @@ import Insurance from "./pages/user/Insurance";
 // Admin Pages
 import AdminDashboard from "./pages/admin/Dashboard";
 import ManageDoctors from "./pages/admin/ManageDoctors";
+import AddDoctor from "./pages/admin/AddDoctor";
 import CheckFeedback from "./pages/admin/CheckFeedback";
 
 const queryClient = new QueryClient();
@@ -74,6 +75,7 @@ const App = () => (
             <Route path="/admin" element={<DashboardLayout userType="admin" />}>
               <Route index element={<AdminDashboard />} />
               <Route path="manage-doctors" element={<ManageDoctors />} />
+              <Route path="add-doctor" element={<AddDoctor />} />
               <Route path="feedback" element={<CheckFeedback />} />
             </Route>
             

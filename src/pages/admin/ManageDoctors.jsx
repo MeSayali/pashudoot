@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlusCircle, Edit, Trash2, CheckCircle, XCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ManageDoctors = () => {
   const doctors = [
@@ -70,10 +71,12 @@ const ManageDoctors = () => {
           <h1 className="text-3xl font-bold text-green-800">Manage Veterinarians</h1>
           <p className="text-gray-600 mt-1">Add, edit, or remove veterinarians from the platform</p>
         </div>
-        <Button className="bg-green-700 hover:bg-green-800">
-          <PlusCircle className="mr-2 h-4 w-4" />
-          Add New Doctor
-        </Button>
+        <Link to="/admin/add-doctor">
+          <Button className="bg-green-700 hover:bg-green-800">
+            <PlusCircle className="mr-2 h-4 w-4" />
+            Add New Doctor
+          </Button>
+        </Link>
       </div>
 
       <Card className="mb-6">
