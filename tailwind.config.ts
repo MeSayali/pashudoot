@@ -1,12 +1,13 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./pages/**/*.{js,jsx}",
+		"./components/**/*.{js,jsx}",
+		"./app/**/*.{js,jsx}",
+		"./src/**/*.{js,jsx}",
 	],
 	prefix: "",
 	theme: {
@@ -61,12 +62,53 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for our farming application
+				earth: {
+					50: '#f4f1eb',
+					100: '#e6dfd0',
+					200: '#d8cdb5',
+					300: '#c9bb9a',
+					400: '#bba97f',
+					500: '#ac9764',
+					600: '#8a7950',
+					700: '#675b3c',
+					800: '#453c28',
+					900: '#221e14'
+				},
+				forest: {
+					50: '#ecf5ec',
+					100: '#d0e8d0',
+					200: '#b4dab4',
+					300: '#98cd98',
+					400: '#7cbf7c',
+					500: '#60b060',
+					600: '#4d8d4d',
+					700: '#3a6a3a',
+					800: '#274627',
+					900: '#132313'
+				},
+				sky: {
+					50: '#eaf5fd',
+					100: '#cce6fa',
+					200: '#add7f7',
+					300: '#8fc8f4',
+					400: '#70b9f1',
+					500: '#52aaee',
+					600: '#4188be',
+					700: '#31668f',
+					800: '#21445f',
+					900: '#102230'
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				sans: ['Open Sans', 'sans-serif'],
+				serif: ['Lora', 'serif']
 			},
 			keyframes: {
 				'accordion-down': {
